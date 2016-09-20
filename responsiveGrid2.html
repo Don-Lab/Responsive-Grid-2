@@ -1,0 +1,81 @@
+<DOCTYPE! html>
+<head>
+  <title>CSS Responsive Grid</title>
+</head>
+<body>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  .row::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+  [class*="col-"] {
+    float: left;
+    padding: 0px;
+  }
+  .col-25 {
+    width: 25%;
+  }
+  .col-50 {
+    width: 50%;
+  }
+  .col-75 {
+    width: 75%;
+  }
+  .col-100 {
+    width: 100%
+  }
+
+  @media only screen and (max-width: 760px) {
+    [class*="col-"] {
+      width: 100%;
+    }
+  }
+  h1, h3 {
+    text-align: center;
+  }
+  </style>
+  <div class="row">
+    <div class="col-100">
+      <h1>Hello World (This is 100%)</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-50">
+      <h3>This is 50%</h3>
+    </div>
+    <div class="col-50">
+      <h3>This is 50%</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-25">
+      <h3>This is 25%</h3>
+    </div>
+    <div class="col-25">
+      <h3>This is 25%</h3>
+    </div>
+    <div class="col-25">
+      <h3>This is 25%</h3>
+    </div>
+    <div class="col-25">
+      <h3>This is 25%</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-75">
+      <h3>This is 75%</h3>
+    </div>
+    <div class="col-25">
+      <h3>This is 25%</h3>
+    </div>
+  </div>
+
+</body>
+</html>
